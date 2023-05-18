@@ -1,9 +1,0 @@
-sudo: required
-services:
- - docker
-
-before_install:
- - docker build -t hereisvishal/docker-react -f Dockerfile.dev .
-
-script:
- - docker run -e CI=true hereisvishal/docker-react npm run test
